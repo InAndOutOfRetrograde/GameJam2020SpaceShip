@@ -11,6 +11,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    enum ButtonName { startButton, endButton };
     //Constants
     const int TIMER_COOLDOWN = 5;
     const int RANDOM_TIMER_LOWER_VALUE = 1;
@@ -19,13 +20,16 @@ public class Button : MonoBehaviour
     //Serialized Fields
     [SerializeField]
     GameObject player;
+    [SerializeField]
+    ButtonName buttonname;
 
     //Vars
     BoxCollider2D playerBC2D;
     BoxCollider2D buttonBC2D;
     Timer timer;
     int randomCooldownAdd;
-    bool buttonPressed = false;
+    bool startButtonPressed = false;
+    bool endButtonPressed = false;
     
 
     // Start is called before the first frame update
@@ -51,16 +55,27 @@ public class Button : MonoBehaviour
             //Debug.Log("IM FUCKING BROKEN");
         }
 
-        //Checks if the player is hitting the button
-        if (buttonBC2D.IsTouching(playerBC2D) && timer.Finished)
+        //Checks if the player is hitting the start button
+        if (buttonBC2D.IsTouching(playerBC2D) && timer.Finished && buttonname == ButtonName.startButton)
         {
-            buttonPressed = true;
+            startButtonPressed = true;
+        }
+
+        //Checks if the player is touching the end button
+        if (buttonBC2D.IsTouching(playerBC2D) && buttonname == ButtonName.endButton)
+        {
+            endButtonPressed = true;
         }
     }
 
-    //Getter 
-    public bool ButtonPressed
+    //Getters
+    public bool StartButtonPressed
     {
-        get { return buttonPressed; }
+        get { return startButtonPressed; }
+    }
+
+    public bool EndButtonPressed
+    {
+        get { return endButtonPressed; }
     }
 }
