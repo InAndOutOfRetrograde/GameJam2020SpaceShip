@@ -12,7 +12,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //CONSTANTS
-    const int SPEED = 5;
+    [SerializeField]
+    const int SPEED = 150;
 
     //Vars
     Rigidbody2D rb2d;
@@ -23,6 +24,7 @@ public class Movement : MonoBehaviour
     {
         //Getting the player's rigidbody2D
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        rb2d.drag = 4;
     }
 
     void Update()
@@ -36,12 +38,14 @@ public class Movement : MonoBehaviour
         if (XAxisInput != 0)
         {
             rb2d.AddForce(transform.right * SPEED * XAxisInput);
+            
         }
 
         //YAxis
         if (YAxisInput != 0)
         {
             rb2d.AddForce(transform.up * SPEED * YAxisInput);
+           
         }
     }
 }
