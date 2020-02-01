@@ -1,7 +1,7 @@
 ﻿/* Author: Kyle Smart (Discord: RxBaka#3988)
  * Date of last modification: 1/31/2020 10:06PM
- * Description: This code gets the input axis to detect the input from the user and move the player accordingly. Movement is achieved
- * by adding a force to the players rigidbody2D. By doing this, this gives the game a floaty movement feel, as if the player is in space. 
+ * Description: This checks the difference between the position of the player and the camera and then at the
+ * end of the frame moves the camera with the player. 
  */
 
 using System.Collections;
