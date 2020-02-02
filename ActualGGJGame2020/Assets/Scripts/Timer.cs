@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/* This timer script is from Dr. T. 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -101,7 +104,5 @@ public class Timer : MonoBehaviour
         started = false;
         running = false;
     }
-
-    #endregion
- 
 }
+        #endregion
