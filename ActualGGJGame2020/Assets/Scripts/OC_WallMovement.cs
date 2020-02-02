@@ -56,12 +56,12 @@ public class OC_WallMovement : MonoBehaviour
                 case 1:
                     if (hideDirection == HideDirection.moveUp)
                     {
-                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, 25, 1);
+                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -58, 1);
                         previousRotation = 0;
                     }
                     else if (hideDirection == HideDirection.moveDown)
                     {
-                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -12, 1);
+                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -105, 1);
                         previousRotation = 0;
                     }
                     break;
@@ -69,13 +69,13 @@ public class OC_WallMovement : MonoBehaviour
                 case 2:
                     if (hideDirection == HideDirection.moveUp)
                     {
-                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, 25, 1);
+                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -58, 1);
                         gameObject.transform.Rotate(0, 0, -36);
                         previousRotation = -36;
                     }
                     else if (hideDirection == HideDirection.moveDown)
                     {
-                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -12, 1);
+                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -105, 1);
                         gameObject.transform.Rotate(0, 0, 50);
                         previousRotation = 50;
                     }
@@ -84,13 +84,13 @@ public class OC_WallMovement : MonoBehaviour
                 case 3:
                     if (hideDirection == HideDirection.moveUp)
                     {
-                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, 21, 1);
+                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -62, 1);
                         gameObject.transform.Rotate(0, 0, 90);
                         previousRotation = 90;
                     }
                     else if (hideDirection == HideDirection.moveDown)
                     {
-                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -8, 1);
+                        gameObject.transform.position = new Vector3(gameObject.transform.position.x, -101, 1);
                         gameObject.transform.Rotate(0, 0, 90);
                         previousRotation = 90;
                     }
@@ -111,12 +111,12 @@ public class OC_WallMovement : MonoBehaviour
         {
             if (hideDirection == HideDirection.moveUp)
             {
-                gameObject.transform.position = new Vector3(gameObject.transform.position.x, 50, -10);
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x, -166, -10);
                 gameObject.transform.Rotate(0, 0, -previousRotation);
             }
             else if (hideDirection == HideDirection.moveDown)
             {
-                gameObject.transform.position = new Vector3(gameObject.transform.position.x, -29, -10);
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x, -166, -10);
                 gameObject.transform.Rotate(0, 0, -previousRotation);
             }
 
