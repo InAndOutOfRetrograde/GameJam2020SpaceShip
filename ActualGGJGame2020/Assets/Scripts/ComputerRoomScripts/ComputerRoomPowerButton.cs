@@ -45,7 +45,7 @@ public class ComputerRoomPowerButton : MonoBehaviour
         if (ComputerStartButtonPressed == true)
         {
             //randomly picks 2 numbers for coordinates on screen.(CHANGE THESE TO FIT THE ACTUAL MINI GAME IN THE BIG SCENE)
-            Vector2 position = new Vector2(Random.Range(-3.0f, -5.0f), Random.Range(-2.0f, -3.0f));
+            Vector2 position = new Vector2(Random.Range(46.0f, -64.0f), Random.Range(83.0f, 142.0f));
             //places the apple
             Instantiate(appleClone, position, Quaternion.identity);
         }

@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 2442839630472365340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9103911, y: -1.4071995, z: -0.0859375}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children:
   - {fileID: 7015544954987857411}
   m_Father: {fileID: 0}
@@ -154,15 +154,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c32e33fcefcf52240ba087f9839b7b42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1019629209431883845
@@ -178,9 +178,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37247807, y: 3.7808805}
+  m_Offset: {x: 0.47686243, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4486428
+  m_Radius: 5.5451827
 --- !u!114 &8148590850297336876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,4 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed792566f6c1b71448069d41b4adf504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Apple: {fileID: 2442839630472365340}
+  Player: {fileID: 0}
