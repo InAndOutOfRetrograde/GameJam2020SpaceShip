@@ -69,13 +69,30 @@ public class Button : MonoBehaviour
     }
 
     //Getters
-    public bool StartButtonPressed
+    public bool GetStartButtonPressed
     {
         get { return startButtonPressed; }
     }
 
-    public bool EndButtonPressed
+    public bool GetEndButtonPressed
     {
         get { return endButtonPressed; }
+    }
+
+    //Setters
+    public bool SetStartButtonPressed
+    {
+        set
+        {
+            startButtonPressed = value;
+        }
+    }
+
+    public bool SetEndButtonPressed
+    {
+        set
+        {
+            endButtonPressed = value;
+        }
     }
 }
