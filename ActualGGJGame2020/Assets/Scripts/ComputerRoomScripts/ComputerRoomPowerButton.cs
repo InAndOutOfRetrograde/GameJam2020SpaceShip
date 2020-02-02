@@ -16,6 +16,9 @@ public class ComputerRoomPowerButton : MonoBehaviour
     {
         spawnTimer = gameObject.AddComponent<Timer>();
         appleEating = appleClone.GetComponent<AppleEating>();
+
+        spawnTimer.Duration = GetSpawnDelayLong();
+        spawnTimer.Run();
     }
     
     //if the player hovers and collides into this, return a boolean that equals true.
@@ -62,11 +65,12 @@ public class ComputerRoomPowerButton : MonoBehaviour
         
         if (appleEating.GetAppleEaten == true)
         {
-            Debug.Log("fuck");
+            Debug.Log("Apple is eaten!");
             //if so, set state to fixed
             ComputerRoomFixed = true;
             //change to happy sprite here
             //start a cooldown timer <---COOL DOWN TIMER IS HERE <-------------------------
+            spawnTimer.Stop();
             spawnTimer.Duration = GetSpawnDelayLong();
             spawnTimer.Run();
             //checks to see if timer is done to let the player try again.
@@ -78,6 +82,7 @@ public class ComputerRoomPowerButton : MonoBehaviour
         {
             //lets the player press it again after the game loop.
             ComputerStartButtonPressed = false;
+            ComputerRoomFixed = false;
         }
     }
 }
