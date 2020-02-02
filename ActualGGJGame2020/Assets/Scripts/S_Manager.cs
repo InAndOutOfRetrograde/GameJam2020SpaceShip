@@ -34,7 +34,7 @@ public class S_Manager : MonoBehaviour
 
             
             }
-        Debug.Log(buttons);
+        //Debug.Log(buttons);
 
         if (buttons == 12)
         {

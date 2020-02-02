@@ -27,12 +27,12 @@ public class OC_Button : MonoBehaviour
     //Vars
     BoxCollider2D playerBC2D;
     BoxCollider2D buttonBC2D;
-    Timer timer;
+    static Timer timer;
     int randomCooldownAdd;
-    bool startButtonPressed = false;
-    bool endButtonPressed = false;
-    bool messageSent = false;
-    bool brokenCall = false;
+    static bool startButtonPressed = false;
+    static bool endButtonPressed = false;
+    static bool messageSent = false;
+    static bool brokenCall = false;
     
 
     // Start is called before the first frame update
@@ -77,6 +77,7 @@ public class OC_Button : MonoBehaviour
 
             //Restarts the timer with a random time
             randomCooldownAdd = Random.Range(RANDOM_TIMER_LOWER_VALUE, RANDOM_TIMER_UPPER_VALUE);
+            timer.Stop();
             timer.Duration = TIMER_COOLDOWN + randomCooldownAdd;
             timer.Run();
 
