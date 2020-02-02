@@ -2258,6 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OCGame: {fileID: 993374589}
+  SGame: {fileID: 517451823}
 --- !u!1001 &993374588
 PrefabInstance:
   m_ObjectHideFlags: 0
