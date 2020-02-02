@@ -548,15 +548,15 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff0000000090330000503400004035000060350000c83600008c370000e6390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GameOverManager
-      m_OriginalName: GameOverManager
+      m_Name: Timer
+      m_OriginalName: Timer
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14834
+      m_UserData: 17810
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
