@@ -1,6 +1,7 @@
 ﻿/* Author: Kyle Smart
- * Description: This code checks if the player is touching the button after the button has been activated after 
- * a time has past. The time will be set by a constant number and added on by a random number. 
+ * Description: This code checks if the player is touching the button after a timer has finished. 
+ * The timer will be set by a constant number and added on by a random number. Once a button is pressed
+ * it will set its boolean to true and the other buttons boolean to false.
  * Date last modified: 2/1/2020
  */
 
@@ -13,9 +14,9 @@ public class Button : MonoBehaviour
 {
     enum ButtonName { startButton, endButton };
     //Constants
-    const int TIMER_COOLDOWN = 5;
+    const int TIMER_COOLDOWN = 1;
     const int RANDOM_TIMER_LOWER_VALUE = 1;
-    const int RANDOM_TIMER_UPPER_VALUE = 10;
+    const int RANDOM_TIMER_UPPER_VALUE = 2;
 
     //Serialized Fields
     [SerializeField]
@@ -30,6 +31,7 @@ public class Button : MonoBehaviour
     int randomCooldownAdd;
     bool startButtonPressed = false;
     bool endButtonPressed = false;
+    bool messageSent = false;
     
 
     // Start is called before the first frame update
@@ -50,21 +52,36 @@ public class Button : MonoBehaviour
     void Update()
     {
         //Tells the player the button can be hit
-        if (timer.Finished)
+        if (timer.Finished && !messageSent)
         {
-            //Debug.Log("IM FUCKING BROKEN");
+            Debug.Log("IM FUCKING BROKEN");
+            messageSent = true;
         }
 
         //Checks if the player is hitting the start button
         if (buttonBC2D.IsTouching(playerBC2D) && timer.Finished && buttonname == ButtonName.startButton)
         {
+            Debug.Log("GO!");
             startButtonPressed = true;
+            endButtonPressed = false;
         }
 
         //Checks if the player is touching the end button
         if (buttonBC2D.IsTouching(playerBC2D) && buttonname == ButtonName.endButton)
         {
+            Debug.Log("FINISH!");
+
+            //End button is now pressed and start button is reset
             endButtonPressed = true;
+            startButtonPressed = false;
+
+            //Restarts the timer with a random time
+            randomCooldownAdd = Random.Range(RANDOM_TIMER_LOWER_VALUE, RANDOM_TIMER_UPPER_VALUE);
+            timer.Duration = TIMER_COOLDOWN + randomCooldownAdd;
+            timer.Run();
+
+            //Resets message sent to player about this being broken
+            messageSent = false;
         }
     }
 
