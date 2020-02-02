@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\OC_Button.cs" />
     <Compile Include="Assets\Scripts\OC_WallMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\S_Light.cs" />
+    <Compile Include="Assets\Scripts\S_Manager.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Owner/Desktop/GGJRepo/GameJam2020SpaceShip/ActualGGJGame2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
