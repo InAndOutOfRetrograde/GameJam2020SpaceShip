@@ -63,9 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\GameOverManager.cs" />
-    <Compile Include="Assets\Scripts\ComputerRoomScripts\ComputerRoomPowerButton.cs" />
     <Compile Include="Assets\Scripts\ComputerRoomScripts\AppleEating.cs" />
+    <Compile Include="Assets\Scripts\ComputerRoomScripts\ComputerRoomPowerButton.cs" />
+    <Compile Include="Assets\Scripts\GameOverManager.cs" />
     <Compile Include="Assets\Scripts\OC_Button.cs" />
     <Compile Include="Assets\Scripts\OC_WallMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
