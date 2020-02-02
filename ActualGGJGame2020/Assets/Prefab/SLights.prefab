@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2591520055494786804}
   - component: {fileID: 2591520055494786800}
   m_Layer: 0
-  m_Name: button
+  m_Name: SLights
   m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6cf70a8290255cf4aa9266fedd81ddff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81d6a183c11d70646ae38f39e53cc738, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,10 +96,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec25a6a758a2c24199d145d4ee3ccb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   _state: 1
-  red: {fileID: 21300000, guid: fe748f6da700a8942b997ab88519ed24, type: 3}
-  green: {fileID: 21300000, guid: 6cf70a8290255cf4aa9266fedd81ddff, type: 3}
+  red: {fileID: 21300000, guid: c894908d7e38d4048bfd770c5fc34129, type: 3}
+  green: {fileID: 21300000, guid: 81d6a183c11d70646ae38f39e53cc738, type: 3}
+  spriteRenderer: {fileID: 0}
   checkedOff: 1
+  button: 0
 --- !u!61 &2591520055494786804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116,7 +120,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 1.8}
+    oldSize: {x: 1.64, y: 1.58}
     newSize: {x: 1.76, y: 1.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

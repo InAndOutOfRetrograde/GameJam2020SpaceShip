@@ -52,12 +52,12 @@ public class S_Manager : MonoBehaviour
     float GetSpawnDelay()
     {
         buttons = 0;
-        return 5;
+        return 30;
     }
     float GetSpawnDelayLong()
     {
         buttons = 0;
-        return 1;
+        return 30;
     }
 
     //Adds 1 to buttons
