@@ -16,7 +16,7 @@ public class OC_Button : MonoBehaviour
     //Constants
     const int TIMER_COOLDOWN = 1;
     const int RANDOM_TIMER_LOWER_VALUE = 1;
-    const int RANDOM_TIMER_UPPER_VALUE = 2;
+    const int RANDOM_TIMER_UPPER_VALUE = 10;
 
     //Serialized Fields
     [SerializeField]
@@ -32,6 +32,7 @@ public class OC_Button : MonoBehaviour
     bool startButtonPressed = false;
     bool endButtonPressed = false;
     bool messageSent = false;
+    bool brokenCall = false;
     
 
     // Start is called before the first frame update
@@ -54,14 +55,13 @@ public class OC_Button : MonoBehaviour
         //Tells the player the button can be hit
         if (timer.Finished && !messageSent)
         {
-            Debug.Log("IM FUCKING BROKEN");
+            brokenCall = true;
             messageSent = true;
         }
 
         //Checks if the player is hitting the start button
         if (buttonBC2D.IsTouching(playerBC2D) && timer.Finished && buttonname == ButtonName.startButton)
         {
-            Debug.Log("GO!");
             startButtonPressed = true;
             endButtonPressed = false;
         }
@@ -69,7 +69,7 @@ public class OC_Button : MonoBehaviour
         //Checks if the player is touching the end button
         if (buttonBC2D.IsTouching(playerBC2D) && buttonname == ButtonName.endButton)
         {
-            Debug.Log("FINISH!");
+            brokenCall = false;
 
             //End button is now pressed and start button is reset
             endButtonPressed = true;
@@ -96,6 +96,11 @@ public class OC_Button : MonoBehaviour
         get { return endButtonPressed; }
     }
 
+    public bool GetBrokenCall
+    {
+        get { return brokenCall; }
+    }
+
     //Setters
     public bool SetStartButtonPressed
     {
@@ -111,5 +116,10 @@ public class OC_Button : MonoBehaviour
         {
             endButtonPressed = value;
         }
+    }
+
+    public bool SetBrokenCall
+    {
+        set { brokenCall = value; }
     }
 }

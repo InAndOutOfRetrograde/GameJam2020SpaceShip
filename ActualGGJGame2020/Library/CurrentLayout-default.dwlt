@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 431, y: 371}
   m_MaxSize: {x: 14001, y: 14021}
   vertical: 1
-  controlID: 102
+  controlID: 154
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 77
+  controlID: 190
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_MinSize: {x: 908, y: 442}
   m_MaxSize: {x: 22003, y: 14021}
   vertical: 0
-  controlID: 76
+  controlID: 211
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -402,10 +402,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 48}
-      m_SelectedIDs: 6cedffff
-      m_LastClickedID: -4756
-      m_ExpandedIDs: ceedffff5eefffff06f1fffff0f1ffff0af8fffff2f9ffff6efbffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: e2f8ffff
+      m_LastClickedID: -1822
+      m_ExpandedIDs: 6efbffff2a390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -505,8 +505,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scenes
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -518,7 +517,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: d4280000
     m_LastClickedID: 10452
-    m_ExpandedIDs: 0000000090330000503400004035000060350000c83600008c370000b0390000
+    m_ExpandedIDs: 0000000090330000503400004035000060350000c83600008c370000e6390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -546,21 +545,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000090330000503400004035000060350000c83600008c370000b0390000
+    m_ExpandedIDs: ffffffff0000000090330000503400004035000060350000c83600008c370000e6390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: GameOverManager
+      m_OriginalName: GameOverManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14834
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -781,7 +780,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 105.85524
     speed: 2
-    m_Value: 110.843185
+    m_Value: 105.85524
   m_Ortho:
     m_Target: 1
     speed: 2
