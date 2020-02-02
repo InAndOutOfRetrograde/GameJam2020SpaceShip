@@ -56,7 +56,7 @@ public class ComputerRoomPowerButton : MonoBehaviour
     float GetSpawnDelayLong()
     {
         //time
-        return 4;
+        return 6;
     }
     // Update is called once per frame
     void Update()

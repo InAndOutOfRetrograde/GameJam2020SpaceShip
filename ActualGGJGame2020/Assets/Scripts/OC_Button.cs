@@ -14,7 +14,7 @@ public class OC_Button : MonoBehaviour
 {
     enum ButtonName { startButton, endButton };
     //Constants
-    const int TIMER_COOLDOWN = 1;
+    const int TIMER_COOLDOWN = 15;
     const int RANDOM_TIMER_LOWER_VALUE = 1;
     const int RANDOM_TIMER_UPPER_VALUE = 10;
 
