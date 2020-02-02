@@ -46,7 +46,6 @@ public class S_Light : MonoBehaviour
                 _state = State.off;
                 spriteRenderer.sprite = red;
                 checkedOff = false;
-                Debug.Log("false");
           
             }
             
@@ -60,13 +59,10 @@ public class S_Light : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("works");
-        Debug.Log("CheckedOff: " + checkedOff + "\nState: " + _state);
         if (_state == State.off && !checkedOff)
         {
             
             spriteRenderer.sprite = green;
-            Debug.Log("green");
             checkedOff = true;
             
             //button++;

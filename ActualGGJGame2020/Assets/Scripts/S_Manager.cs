@@ -38,11 +38,9 @@ public class S_Manager : MonoBehaviour
 
         if (buttons == 12)
         {
-            Debug.Log("Inhere");
             //spawnTimer.Stop();
             spawnTimer.Duration = GetSpawnDelayLong();
             spawnTimer.Run();
-            Debug.Log("Inside if: " + buttons);
         }
 
     }
@@ -66,7 +64,6 @@ public class S_Manager : MonoBehaviour
     public void buttonAdder()
     {
         buttons++;
-        Debug.Log("Buttons = " + buttons);
     }
 
 
