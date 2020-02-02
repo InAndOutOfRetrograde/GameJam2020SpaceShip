@@ -9,6 +9,7 @@ public class GameOverManager : MonoBehaviour
 
     //Vars
     OC_Button OCGameBroken;
+    bool OCIsBroken = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +18,11 @@ public class GameOverManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (OCGameBroken.GetBrokenCall)
+    {       
+        OCIsBroken = OCGameBroken.GetBrokenCall;
+        if (OCIsBroken)
         {
-            Debug.Log("Game Over");
+            Debug.Log("Game Over. ");
         }
     }
 }
